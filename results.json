@@ -1,0 +1,417 @@
+{
+  "n_rows": 7043,
+  "n_cols": 21,
+  "churn_rate": 0.2653698707936959,
+  "describe": {
+    "count": {
+      "tenure": 7043.0,
+      "MonthlyCharges": 7043.0,
+      "TotalCharges": 7043.0
+    },
+    "mean": {
+      "tenure": 32.37,
+      "MonthlyCharges": 64.76,
+      "TotalCharges": 2279.73
+    },
+    "std": {
+      "tenure": 24.56,
+      "MonthlyCharges": 30.09,
+      "TotalCharges": 2266.79
+    },
+    "min": {
+      "tenure": 0.0,
+      "MonthlyCharges": 18.25,
+      "TotalCharges": 0.0
+    },
+    "25%": {
+      "tenure": 9.0,
+      "MonthlyCharges": 35.5,
+      "TotalCharges": 398.55
+    },
+    "50%": {
+      "tenure": 29.0,
+      "MonthlyCharges": 70.35,
+      "TotalCharges": 1394.55
+    },
+    "75%": {
+      "tenure": 55.0,
+      "MonthlyCharges": 89.85,
+      "TotalCharges": 3786.6
+    },
+    "max": {
+      "tenure": 72.0,
+      "MonthlyCharges": 118.75,
+      "TotalCharges": 8684.8
+    },
+    "skewness": {
+      "tenure": 0.24,
+      "MonthlyCharges": -0.22,
+      "TotalCharges": 0.96
+    },
+    "kurtosis": {
+      "tenure": -1.39,
+      "MonthlyCharges": -1.26,
+      "TotalCharges": -0.23
+    }
+  },
+  "outliers": [
+    {
+      "feature": "tenure",
+      "lower_fence": -60.0,
+      "upper_fence": 124.0,
+      "n_outliers": 0
+    },
+    {
+      "feature": "MonthlyCharges",
+      "lower_fence": -46.02,
+      "upper_fence": 171.38,
+      "n_outliers": 0
+    },
+    {
+      "feature": "TotalCharges",
+      "lower_fence": -4683.52,
+      "upper_fence": 8868.67,
+      "n_outliers": 0
+    }
+  ],
+  "churn_by_contract": {
+    "Month-to-month": 0.4271,
+    "One year": 0.1127,
+    "Two year": 0.0283
+  },
+  "means_by_churn": {
+    "tenure": {
+      "Yes": 17.979133226324237,
+      "No": 37.56996521066873
+    },
+    "MonthlyCharges": {
+      "Yes": 74.44133226324237,
+      "No": 61.26512369540008
+    },
+    "TotalCharges": {
+      "Yes": 1531.7960941680042,
+      "No": 2549.911441824507
+    }
+  },
+  "corr_with_churn": {
+    "tenure": -0.352,
+    "MonthlyCharges": 0.193,
+    "TotalCharges": -0.198,
+    "Churn (1=Yes)": 1.0,
+    "Services_count": -0.088
+  },
+  "corr_tenure_total": 0.8261783979502434,
+  "top_levels": [
+    {
+      "label": "SeniorCitizen = Yes",
+      "churn_rate": 0.417
+    },
+    {
+      "label": "OnlineSecurity = No",
+      "churn_rate": 0.418
+    },
+    {
+      "label": "InternetService = Fiber optic",
+      "churn_rate": 0.419
+    },
+    {
+      "label": "Contract = Month-to-month",
+      "churn_rate": 0.427
+    },
+    {
+      "label": "PaymentMethod = Electronic check",
+      "churn_rate": 0.453
+    }
+  ],
+  "bottom_levels": [
+    {
+      "label": "Contract = Two year",
+      "churn_rate": 0.028
+    },
+    {
+      "label": "InternetService = No",
+      "churn_rate": 0.074
+    },
+    {
+      "label": "OnlineBackup = No internet service",
+      "churn_rate": 0.074
+    },
+    {
+      "label": "DeviceProtection = No internet service",
+      "churn_rate": 0.074
+    },
+    {
+      "label": "TechSupport = No internet service",
+      "churn_rate": 0.074
+    }
+  ],
+  "normality": [
+    {
+      "feature": "tenure",
+      "skew": 0.24,
+      "excess_kurtosis": -1.387,
+      "D'Agostino K2": 76258.5,
+      "p_value": 0.0,
+      "normal?": "No"
+    },
+    {
+      "feature": "MonthlyCharges",
+      "skew": -0.221,
+      "excess_kurtosis": -1.257,
+      "D'Agostino K2": 11419.5,
+      "p_value": 0.0,
+      "normal?": "No"
+    },
+    {
+      "feature": "TotalCharges",
+      "skew": 0.963,
+      "excess_kurtosis": -0.229,
+      "D'Agostino K2": 808.6,
+      "p_value": 2.6049140547884828e-176,
+      "normal?": "No"
+    }
+  ],
+  "binom": {
+    "p_hat": 0.3396516635903261,
+    "chi2": 14381.15161712564,
+    "p": 0.0
+  },
+  "churn_by_nservices": {
+    "0": 0.214,
+    "1": 0.458,
+    "2": 0.358,
+    "3": 0.274,
+    "4": 0.223,
+    "5": 0.124,
+    "6": 0.053
+  },
+  "tests_top": [
+    {
+      "feature": "Contract",
+      "test": "Chi-square",
+      "statistic": 1184.6,
+      "p_value": "5.86e-258",
+      "effect": 0.41,
+      "significant": true
+    },
+    {
+      "feature": "tenure",
+      "test": "Mann-Whitney U",
+      "statistic": 2515538.0,
+      "p_value": "2.42e-208",
+      "effect": -0.352,
+      "significant": true
+    },
+    {
+      "feature": "OnlineSecurity",
+      "test": "Chi-square",
+      "statistic": 850.0,
+      "p_value": "2.66e-185",
+      "effect": 0.347,
+      "significant": true
+    },
+    {
+      "feature": "TechSupport",
+      "test": "Chi-square",
+      "statistic": 828.2,
+      "p_value": "1.44e-180",
+      "effect": 0.343,
+      "significant": true
+    },
+    {
+      "feature": "InternetService",
+      "test": "Chi-square",
+      "statistic": 732.3,
+      "p_value": "9.57e-160",
+      "effect": 0.322,
+      "significant": true
+    },
+    {
+      "feature": "PaymentMethod",
+      "test": "Chi-square",
+      "statistic": 648.1,
+      "p_value": "3.68e-140",
+      "effect": 0.303,
+      "significant": true
+    },
+    {
+      "feature": "OnlineBackup",
+      "test": "Chi-square",
+      "statistic": 601.8,
+      "p_value": "2.08e-131",
+      "effect": 0.292,
+      "significant": true
+    },
+    {
+      "feature": "DeviceProtection",
+      "test": "Chi-square",
+      "statistic": 558.4,
+      "p_value": "5.51e-122",
+      "effect": 0.282,
+      "significant": true
+    }
+  ],
+  "not_significant": [
+    "PhoneService",
+    "gender"
+  ],
+  "split": {
+    "train": 4930,
+    "val": 1056,
+    "test": 1057,
+    "n_features": 40
+  },
+  "baseline": {
+    "auc": 0.8448288513042522,
+    "acc": 0.7473982970671712,
+    "recall": 0.7793594306049823,
+    "f1": 0.6212765957446809
+  },
+  "tuning": [
+    {
+      "hidden_units": "(32, 16)",
+      "dropout": 0.4,
+      "learning_rate": 0.01,
+      "epochs_run": 22,
+      "val_auc": 0.8459
+    },
+    {
+      "hidden_units": "(128, 64)",
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "epochs_run": 20,
+      "val_auc": 0.8457
+    },
+    {
+      "hidden_units": "(128, 64)",
+      "dropout": 0.4,
+      "learning_rate": 0.01,
+      "epochs_run": 13,
+      "val_auc": 0.8456
+    },
+    {
+      "hidden_units": "(128, 64)",
+      "dropout": 0.4,
+      "learning_rate": 0.001,
+      "epochs_run": 26,
+      "val_auc": 0.8454
+    },
+    {
+      "hidden_units": "(128, 64)",
+      "dropout": 0.2,
+      "learning_rate": 0.01,
+      "epochs_run": 13,
+      "val_auc": 0.8443
+    },
+    {
+      "hidden_units": "(64, 32)",
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "epochs_run": 22,
+      "val_auc": 0.8433
+    },
+    {
+      "hidden_units": "(32, 16)",
+      "dropout": 0.2,
+      "learning_rate": 0.01,
+      "epochs_run": 18,
+      "val_auc": 0.843
+    },
+    {
+      "hidden_units": "(64, 32)",
+      "dropout": 0.2,
+      "learning_rate": 0.01,
+      "epochs_run": 15,
+      "val_auc": 0.8424
+    },
+    {
+      "hidden_units": "(64, 32)",
+      "dropout": 0.4,
+      "learning_rate": 0.01,
+      "epochs_run": 16,
+      "val_auc": 0.8424
+    },
+    {
+      "hidden_units": "(32, 16)",
+      "dropout": 0.4,
+      "learning_rate": 0.001,
+      "epochs_run": 41,
+      "val_auc": 0.8417
+    },
+    {
+      "hidden_units": "(64, 32)",
+      "dropout": 0.4,
+      "learning_rate": 0.001,
+      "epochs_run": 19,
+      "val_auc": 0.8417
+    },
+    {
+      "hidden_units": "(32, 16)",
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "epochs_run": 30,
+      "val_auc": 0.8412
+    }
+  ],
+  "best_cfg": {
+    "units": [
+      32,
+      16
+    ],
+    "dropout": 0.4,
+    "lr": 0.01
+  },
+  "epochs_trained": 22,
+  "n_params": 1857,
+  "mlp": {
+    "auc": 0.838967971530249,
+    "acc": 0.7464522232734153,
+    "precision": 0.5156626506024097,
+    "recall": 0.7615658362989324,
+    "f1": 0.6149425287356322
+  },
+  "cm": [
+    [
+      575,
+      201
+    ],
+    [
+      67,
+      214
+    ]
+  ],
+  "importance_top": [
+    {
+      "feature": "tenure",
+      "auc_drop": 0.0652
+    },
+    {
+      "feature": "Contract_Two year",
+      "auc_drop": 0.0144
+    },
+    {
+      "feature": "Contract_Month-to-month",
+      "auc_drop": 0.0105
+    },
+    {
+      "feature": "InternetService_DSL",
+      "auc_drop": 0.0078
+    },
+    {
+      "feature": "OnlineSecurity_Yes",
+      "auc_drop": 0.0031
+    },
+    {
+      "feature": "PaymentMethod_Electronic check",
+      "auc_drop": 0.0027
+    },
+    {
+      "feature": "TechSupport_Yes",
+      "auc_drop": 0.0026
+    },
+    {
+      "feature": "TotalCharges",
+      "auc_drop": 0.0025
+    }
+  ]
+}
