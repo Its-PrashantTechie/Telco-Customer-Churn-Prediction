@@ -1,1 +1,1 @@
-*.html linguist-documentation
+notebooks/** linguist-language=Jupyter-Notebook
